@@ -2,3 +2,9 @@
 
 - include: gnome.yml
   sudo: yes
+
+- include: virtualbox.yml
+  sudo: yes
+
+- include: utilities.yml
+  sudo: yes
