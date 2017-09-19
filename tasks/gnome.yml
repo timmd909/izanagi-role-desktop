@@ -1,0 +1,4 @@
+---
+
+- name: Install Gnome
+  apt: name=gnome state=latest
