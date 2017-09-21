@@ -1,0 +1,63 @@
+---
+
+- name: Install HandBrake
+  apt: name="{{ item }}" state=latest
+  with_items:
+    - handbrake
+    - handbrake-cli
+
+- name: Install ffmpeg PPA
+  apt_repository: repo=ppa:jonathonf/ffmpeg-3
+
+- name: Install ffmpeg
+  apt: name="{{ item }}" state=latest
+  with_items:
+    - ffmpeg
+    - x264
+    - x265
+
+- name: Install GTK themes
+  apt: name="{{ item }}" state=latest
+  with_items:
+    - adium-theme-ubuntu
+    - dmz-cursor-theme
+    - gnome-accessibility-themes
+    - gnome-icon-theme
+    - gnome-icon-theme-full
+    - gnome-icon-theme-symbolic
+    - gnome-themes-standard
+    - gnome-themes-standard-data
+    - hicolor-icon-theme
+    - humanity-icon-theme
+    - light-themes
+    - numix-gtk-theme
+    - plymouth-theme-ubuntu-logo
+    - plymouth-theme-ubuntu-text
+    - sound-theme-freedesktop
+    - ubuntu-ui-toolkit-theme
+    - xcursor-themes
+
+- name: Install wallpapers
+  apt: name="{{ item }}" state=latest
+  with_items:
+    - edgy-community-wallpapers
+    - shimmer-wallpapers
+    - tropic-wallpapers
+    - ubuntu-mate-wallpapers
+    - ubuntu-mate-wallpapers-common
+    - ubuntu-mate-wallpapers-xenial
+    - ubuntu-wallpapers
+    - ubuntu-wallpapers-karmic
+    - ubuntu-wallpapers-lucid
+    - ubuntu-wallpapers-maverick
+    - ubuntu-wallpapers-natty
+    - ubuntu-wallpapers-oneiric
+    - ubuntu-wallpapers-precise
+    - ubuntu-wallpapers-quantal
+    - ubuntu-wallpapers-raring
+    - ubuntu-wallpapers-saucy
+    - ubuntu-wallpapers-trusty
+    - ubuntu-wallpapers-xenial
+    - xubuntu-community-wallpapers
+    - xubuntu-community-wallpapers-xenial
+    - xubuntu-wallpapers

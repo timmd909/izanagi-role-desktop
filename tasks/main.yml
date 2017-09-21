@@ -8,3 +8,9 @@
 
 - include: utilities.yml
   sudo: yes
+
+- include: networking.yml
+  sudo: yes
+
+- include: multimedia.yml
+  sudo: yes

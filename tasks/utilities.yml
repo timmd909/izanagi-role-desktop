@@ -1,7 +1,16 @@
 ---
 
 - name: Install helpful utilities
-  apt: name="{{ item }}" state=present
+  apt: name="{{ item }}" state=latest
   with_items:
     - gkrellm
+    - gkrellm-cpufreq
+    - gkrellm-x86info
+    - sshfs
     - synaptic
+
+- name: Install Thunar
+  apt: name=thunar state=latest
+
+- name: Install Terminator
+  apt: name=terminator state=latest
