@@ -3,6 +3,7 @@
 - name: Install helpful utilities
   apt: name="{{ item }}" state=latest
   with_items:
+    - alsa-utils
     - gkrellm
     - gkrellm-cpufreq
     - gkrellm-x86info
@@ -14,3 +15,6 @@
 
 - name: Install Terminator
   apt: name=terminator state=latest
+
+- apt: name=ubuntu-restricted-extras state=latest
+- apt: name=ubuntu-restricted-addons state=latest

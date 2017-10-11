@@ -1,5 +1,8 @@
 ---
 
+- name: Install VLC
+  apt: name=vlc state=latest
+
 - name: Install HandBrake
   apt: name="{{ item }}" state=latest
   with_items:
