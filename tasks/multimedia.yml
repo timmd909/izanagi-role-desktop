@@ -30,7 +30,10 @@
     - gnome-icon-theme-symbolic
     - gnome-themes-standard
     - gnome-themes-standard-data
+    - gray-theme
     - hicolor-icon-theme
+    - human-netbook-theme
+    - human-theme
     - humanity-icon-theme
     - light-themes
     - numix-gtk-theme
