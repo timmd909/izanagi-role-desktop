@@ -1,16 +1,21 @@
 ---
 
 - include: gnome.yml
-  sudo: yes
+  become: yes
+  become_user: root
 
 - include: virtualbox.yml
-  sudo: yes
+  become: yes
+  become_user: root
 
 - include: utilities.yml
-  sudo: yes
+  become: yes
+  become_user: root
 
 - include: networking.yml
-  sudo: yes
+  become: yes
+  become_user: root
 
 - include: multimedia.yml
-  sudo: yes
+  become: yes
+  become_user: root
