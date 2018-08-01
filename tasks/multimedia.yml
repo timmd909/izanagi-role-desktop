@@ -9,8 +9,13 @@
     - handbrake
     - handbrake-cli
 
-- name: Install ffmpeg PPA
+- name: Install ffmpeg PPA (Mint)
+  apt_repository: repo=ppa:jonathonf/ffmpeg-3 codename=bionic
+  when: ansible_distribution == "Linux Mint"
+
+- name: Install ffmpeg PPA (Ubuntu)
   apt_repository: repo=ppa:jonathonf/ffmpeg-3
+  when: ansible_distribution == "Ubuntu"
 
 - name: Install ffmpeg
   apt: name="{{ item }}" state=latest
@@ -41,6 +46,7 @@
     - sound-theme-freedesktop
     - ubuntu-ui-toolkit-theme
     - xcursor-themes
+  when: ansible_distribution == "Ubuntu"
 
 - name: Install wallpapers
   apt: name="{{ item }}" state=latest
