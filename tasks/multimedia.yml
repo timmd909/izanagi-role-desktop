@@ -66,3 +66,4 @@
     - xubuntu-community-wallpapers
     - xubuntu-community-wallpapers-xenial
     - xubuntu-wallpapers
+  when: ansible_distribution == "Ubuntu"
