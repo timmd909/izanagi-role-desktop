@@ -9,9 +9,9 @@
     - handbrake
     - handbrake-cli
 
-- name: Install ffmpeg PPA (Mint)
-  apt_repository: repo=ppa:jonathonf/ffmpeg-3 codename=bionic
-  when: ansible_distribution == "Linux Mint"
+#- name: Install ffmpeg PPA (Mint)
+#  apt_repository: repo=ppa:jonathonf/ffmpeg-3 codename=bionic
+#  when: ansible_distribution == "Linux Mint"
 
 - name: Install ffmpeg PPA (Ubuntu)
   apt_repository: repo=ppa:jonathonf/ffmpeg-3
@@ -23,8 +23,9 @@
     - ffmpeg
     - x264
     - x265
+  when: ansible_distribution == "Ubuntu"
 
-- name: Install GTK themes
+- name: Install GTK themes (Ubuntu)
   apt: name="{{ item }}" state=latest
   with_items:
     - adium-theme-ubuntu
@@ -46,9 +47,9 @@
     - sound-theme-freedesktop
     - ubuntu-ui-toolkit-theme
     - xcursor-themes
-  when: ansible_distribution == "Ubuntu"
+  when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "16.04"
 
-- name: Install wallpapers
+- name: Install wallpapers (Ubuntu)
   apt: name="{{ item }}" state=latest
   with_items:
     - edgy-community-wallpapers
@@ -72,4 +73,4 @@
     - xubuntu-community-wallpapers
     - xubuntu-community-wallpapers-xenial
     - xubuntu-wallpapers
-  when: ansible_distribution == "Ubuntu"
+  when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "16.04"
