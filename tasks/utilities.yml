@@ -19,5 +19,5 @@
 - apt: name=ubuntu-restricted-extras state=latest
 - apt: name=ubuntu-restricted-addons state=latest
 
-- name: Install cryptkeeper
-  apt: name=cryptkeeper 
+- name: Uninstall cryptkeeper (ancient software)
+  apt: name=cryptkeeper state=absent
