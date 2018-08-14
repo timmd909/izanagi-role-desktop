@@ -13,9 +13,9 @@
 #  apt_repository: repo=ppa:jonathonf/ffmpeg-3 codename=bionic
 #  when: ansible_distribution == "Linux Mint"
 
-- name: Install ffmpeg PPA (Ubuntu)
+- name: Install ffmpeg PPA (Ubuntu 16.04)
   apt_repository: repo=ppa:jonathonf/ffmpeg-3
-  when: ansible_distribution == "Ubuntu"
+  when: ansible_distribution == "Ubuntu" and ansible_distribution_version == '16.04'
 
 - name: Install ffmpeg
   apt: name="{{ item }}" state=latest
