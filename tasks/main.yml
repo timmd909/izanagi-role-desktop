@@ -19,3 +19,7 @@
 - include: multimedia.yml
   become: yes
   become_user: root
+
+- include: themes.yml
+  become: yes
+  become_user: root
