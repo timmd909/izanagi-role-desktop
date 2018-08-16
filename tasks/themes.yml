@@ -5,7 +5,7 @@
 # Ubuntu 16.04
 #
 
-- name: Install GTK themes (Ubuntu 16.04)
+- name: Install themes (Ubuntu 16.04)
   apt: name="{{ item }}" state=latest
   with_items:
     - adium-theme-ubuntu
@@ -22,8 +22,6 @@
     - humanity-icon-theme
     - light-themes
     - numix-gtk-theme
-    - plymouth-theme-ubuntu-logo
-    - plymouth-theme-ubuntu-text
     - sound-theme-freedesktop
     - ubuntu-ui-toolkit-theme
     - xcursor-themes
@@ -32,7 +30,7 @@
 #
 # Ubuntu 18.04
 #
-- name: Install Shimmer project themes (Ubuntu 18.04)
+- name: Install GTK themes (Ubuntu 18.04)
   apt:
   with_items:
     - albatross-gtk-theme
@@ -47,12 +45,27 @@
 - name: Install wallpapers (Ubuntu)
   apt: name="{{ item }}" state=latest
   with_items:
+    - budgie-wallpapers
+    - budgie-wallpapers-artful
+    - budgie-wallpapers-bionic
+    - budgie-wallpapers-xenial
+    - budgie-wallpapers-yakkety
+    - budgie-wallpapers-zesty
     - edgy-community-wallpapers
-    - shimmer-wallpapers
     - tropic-wallpapers
     - ubuntu-mate-wallpapers
+    - ubuntu-mate-wallpapers-artful
+    - ubuntu-mate-wallpapers-bionic
     - ubuntu-mate-wallpapers-common
+    - ubuntu-mate-wallpapers-complete
+    - ubuntu-mate-wallpapers-legacy
+    - ubuntu-mate-wallpapers-photos
+    - ubuntu-mate-wallpapers-utopic
+    - ubuntu-mate-wallpapers-vivid
+    - ubuntu-mate-wallpapers-wily
     - ubuntu-mate-wallpapers-xenial
+    - ubuntu-mate-wallpapers-yakkety
+    - ubuntu-mate-wallpapers-zesty
     - ubuntu-wallpapers
     - ubuntu-wallpapers-karmic
     - ubuntu-wallpapers-lucid
