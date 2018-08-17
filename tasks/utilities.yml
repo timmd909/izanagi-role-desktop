@@ -24,3 +24,20 @@
 
 - name: Uninstall cryptkeeper (ancient software)
   apt: name=cryptkeeper state=absent
+
+# Nemo extension required libraries
+- name: Libraries required to build Nemo extensions
+  apt:
+  with_items:
+    - cdbs
+    - gnome-common
+    - intltool
+    - libcinnamon-desktop-dev
+    - libgnome-keyring-dev
+    - libnemo-extension-dev
+    - python3-all
+    - python3-setuptools
+    - gnome-pkg-tools
+    - gobject-introspection
+    - libcjs-dev
+    - libmusicbrainz5-dev
