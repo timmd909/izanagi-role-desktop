@@ -4,6 +4,10 @@
   become: yes
   become_user: root
 
+- include: cinnamon.yml
+  become: yes
+  become_user: root
+
 - include: virtualbox.yml
   become: yes
   become_user: root
