@@ -2,4 +2,3 @@
 
 - name: Install Gnome
   apt: name=gnome state=latest
-  when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "16.04"

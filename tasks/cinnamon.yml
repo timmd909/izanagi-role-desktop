@@ -2,8 +2,9 @@
 
 - name: Install Cinnamon
   apt: name=cinnamon state=latest
-  when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "18.04"
 
 - name: Install Cinnamon Desktop Environment
   apt: name=cinnamon-desktop-environment state=latest
-  when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "18.04"
+
+- name: Install kwallet
+  apt: name=kwalletmanager state=latest
