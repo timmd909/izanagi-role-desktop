@@ -7,4 +7,9 @@
   apt: name=cinnamon-desktop-environment state=latest
 
 - name: Install kwallet
-  apt: name=kwalletmanager state=latest
+  apt: name="{{ item }}" state=latest
+  with_items:
+    - kwalletmanager
+    - libpam-kwallet-common
+    - libpam-kwallet4
+    - libpam-kwallet5
