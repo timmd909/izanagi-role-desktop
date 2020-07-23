@@ -82,3 +82,18 @@
     - xubuntu-community-wallpapers-xenial
     - xubuntu-wallpapers
   when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
+
+#
+# Ubuntu 20.04
+#
+- name: Install GTK themes (Ubuntu 20.04)
+  apt: name="{{ item }}" state=latest
+  with_items:
+    - blackbird-gtk-theme
+    - bluebird-gtk-theme
+    - greybird-gtk-theme
+    - numix-blue-gtk-theme
+    - numix-gtk-theme
+  when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
+
+
