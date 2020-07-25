@@ -1,14 +1,16 @@
 ---
 
 - name: Install helpful utilities
-  apt: name="{{ item }}" state=latest
-  with_items:
-    - alsa-utils
-    - gkrellm
-    - gkrellm-cpufreq
-    - gkrellm-x86info
-    - sshfs
-    - synaptic
+  apt:
+    state: latest
+    name:
+      - alsa-utils
+      - deepin-screenshot
+      - gkrellm
+      - gkrellm-cpufreq
+      - gkrellm-x86info
+      - sshfs
+      - synaptic
 
 - name: Install Thunar
   apt: name=thunar state=latest
@@ -28,16 +30,18 @@
 # Nemo extension required libraries
 - name: Libraries required to build Nemo extensions
   apt:
-  with_items:
-    - cdbs
-    - gnome-common
-    - intltool
-    - libcinnamon-desktop-dev
-    - libgnome-keyring-dev
-    - libnemo-extension-dev
-    - python3-all
-    - python3-setuptools
-    - gnome-pkg-tools
-    - gobject-introspection
-    - libcjs-dev
-    - libmusicbrainz5-dev
+    state: present
+    name:
+      - cdbs
+      - gnome-common
+      - intltool
+      - libcinnamon-desktop-dev
+      - libgnome-keyring-dev
+      - libnemo-extension-dev
+      - python3-all
+      - python3-setuptools
+      - gnome-pkg-tools
+      - gobject-introspection
+      - libcjs-dev
+      - libmusicbrainz5-dev
+  when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "18.04"

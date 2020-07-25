@@ -6,7 +6,7 @@
 - name: Install Cinnamon Desktop Environment
   apt:
     state: latest
-    pkg:
+    name:
       - cinnamon-desktop-environment
       - cinnamon-screensaver
       - xscreensaver-data

@@ -14,7 +14,7 @@
 
 - name: Install Gnome packages (20.04)
   apt:
-    pkg:
+    name:
       - gnome-shell-extensions
       - gnome-software
       - gnome-tweak-tool

@@ -4,10 +4,11 @@
   apt: name=vlc state=latest
 
 - name: Install HandBrake
-  apt: name="{{ item }}" state=latest
-  with_items:
-    - handbrake
-    - handbrake-cli
+  apt:
+    state: latest
+    name:
+      - handbrake
+      - handbrake-cli
 
 #- name: Install ffmpeg PPA (Mint)
 #  apt_repository: repo=ppa:jonathonf/ffmpeg-3 codename=bionic

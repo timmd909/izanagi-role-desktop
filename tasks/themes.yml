@@ -6,7 +6,7 @@
 
 - name: Install themes (Ubuntu 16.04)
   apt:
-    pkg:
+    name:
       - adium-theme-ubuntu
       - dmz-cursor-theme
       - gnome-accessibility-themes
@@ -31,7 +31,7 @@
 #
 - name: Install GTK themes (Ubuntu 18.04)
   apt:
-    pkg:
+    name:
       - albatross-gtk-theme
       - blackbird-gtk-theme
       - bluebird-gtk-theme
@@ -43,7 +43,7 @@
 
 - name: Install wallpapers (Ubuntu 18.04)
   apt:
-    pkg:
+    name:
       - budgie-wallpapers
       - budgie-wallpapers-artful
       - budgie-wallpapers-bionic
@@ -87,7 +87,7 @@
 #
 - name: Install GTK themes (Ubuntu 20.04)
   apt:
-    pkg:
+    name:
       - gnome-themes-standard
       - adium-theme-ubuntu
       - adwaita-icon-theme-full
@@ -100,7 +100,7 @@
 
 - name: Install wallpapers (Ubuntu 20.04)
   apt:
-    pkg:
+    name:
       - budgie-wallpapers
       - budgie-wallpapers-artful
       - budgie-wallpapers-bionic
