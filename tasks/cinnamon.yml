@@ -4,7 +4,15 @@
   apt: name=cinnamon state=latest
 
 - name: Install Cinnamon Desktop Environment
-  apt: name=cinnamon-desktop-environment state=latest
+  apt:
+    state: latest
+    pkg:
+      - cinnamon-desktop-environment
+      - cinnamon-screensaver
+      - xscreensaver-data
+      - xscreensaver-data-extra
+      - xscreensaver-gl
+      - xscreensaver-gl-extra
 
 - name: Install kwallet
   apt: name="{{ item }}" state=latest

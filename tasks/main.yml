@@ -3,12 +3,12 @@
 - include: gnome.yml
   become: yes
   become_user: root
-  when: ansible_distribution == "Ubuntu" and (ansible_distribution_version == "16.04" or ansible_distribution_version == "18.04")
+  when: ansible_distribution == "Ubuntu" and (ansible_distribution_version == "16.04" or ansible_distribution_version == "18.04"  or ansible_distribution_version == "20.04")
 
 - include: cinnamon.yml
   become: yes
   become_user: root
-  when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "18.04"
+  when: ansible_distribution == "Ubuntu" and (ansible_distribution_version == "18.04" or ansible_distribution_version == "20.04")
 
 - include: virtualbox.yml
   become: yes
