@@ -10,3 +10,13 @@
 - name: Install Gnome Desktop
   apt: name=ubuntu-gnome-desktop state=latest
   when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '16.04'
+
+
+- name: Install Gnome packages (20.04)
+  apt:
+    pkg:
+      - gnome-shell-extensions
+      - gnome-software
+      - gnome-tweak-tool
+      - gnome-tweaks
+  when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '16.04'

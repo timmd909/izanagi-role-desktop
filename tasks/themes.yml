@@ -88,6 +88,9 @@
 - name: Install GTK themes (Ubuntu 20.04)
   apt:
     pkg:
+      - gnome-themes-standard
+      - adium-theme-ubuntu
+      - adwaita-icon-theme-full
       - blackbird-gtk-theme
       - bluebird-gtk-theme
       - greybird-gtk-theme
