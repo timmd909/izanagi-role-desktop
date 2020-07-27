@@ -29,3 +29,13 @@
 - include: themes.yml
   become: yes
   become_user: root
+
+- include: brave-browser.yml
+  become: yes
+  become_user: root
+  when: ansible_distribution == 'Ubuntu'
+
+- include: google-chrome.yml
+  become: yes
+  become_user: root
+  when: ansible_distribution == 'Ubuntu' or ansible_distribution == 'Linux Mint'
