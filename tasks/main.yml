@@ -1,15 +1,21 @@
 ---
 
-- include: gnome.yml
+- include: ubuntu-16.04.yml
   become: yes
   become_user: root
-  when: ansible_distribution == "Ubuntu" and (ansible_distribution_version == "16.04" or ansible_distribution_version == "18.04"  or ansible_distribution_version == "20.04")
+  when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "16.04"
 
-- include: cinnamon.yml
+- include: ubuntu-18.04.yml
   become: yes
   become_user: root
-  when: ansible_distribution == "Ubuntu" and (ansible_distribution_version == "18.04" or ansible_distribution_version == "20.04")
+  when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "18.04"
 
+- include: ubuntu-20.04.yml
+  become: yes
+  become_user: root
+  when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "20.04"
+
+# This should be moved to the hypervisor role soon
 - include: virtualbox.yml
   become: yes
   become_user: root

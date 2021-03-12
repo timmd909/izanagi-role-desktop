@@ -1,0 +1,28 @@
+- name: Install Gnome
+  apt: name=gnome state=latest
+
+- name: Install Gnome Vanilla Desktop
+  apt: name=vanilla-gnome-desktop state=latest
+
+- name: Install Thunar
+  apt: name=thunar state=latest
+
+
+# Nemo extension required libraries
+- name: Libraries required to build Nemo extensions
+  apt:
+    state: present
+    name:
+      - cdbs
+      - gnome-common
+      - intltool
+      - libcinnamon-desktop-dev
+      - libgnome-keyring-dev
+      - libnemo-extension-dev
+      - python3-all
+      - python3-setuptools
+      - gnome-pkg-tools
+      - gobject-introspection
+      - libcjs-dev
+      - libmusicbrainz5-dev
+  when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "18.04"

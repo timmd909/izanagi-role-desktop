@@ -12,9 +12,6 @@
       - sshfs
       - synaptic
 
-- name: Install Thunar
-  apt: name=thunar state=latest
-
 - name: Install Terminator
   apt: name=terminator state=latest
 
@@ -23,25 +20,3 @@
 
 - apt: name=ubuntu-restricted-addons state=latest
   when: ansible_distribution == "Ubuntu"
-
-- name: Uninstall cryptkeeper (ancient software)
-  apt: name=cryptkeeper state=absent
-
-# Nemo extension required libraries
-- name: Libraries required to build Nemo extensions
-  apt:
-    state: present
-    name:
-      - cdbs
-      - gnome-common
-      - intltool
-      - libcinnamon-desktop-dev
-      - libgnome-keyring-dev
-      - libnemo-extension-dev
-      - python3-all
-      - python3-setuptools
-      - gnome-pkg-tools
-      - gobject-introspection
-      - libcjs-dev
-      - libmusicbrainz5-dev
-  when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "18.04"

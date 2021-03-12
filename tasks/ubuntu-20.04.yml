@@ -1,7 +1,5 @@
----
-
-- name: Install Cinnamon
-  apt: name=cinnamon state=latest
+- name: Install Gnome
+  apt: name=gnome state=latest
 
 - name: Install Cinnamon Desktop Environment
   apt:
@@ -14,6 +12,10 @@
       - xscreensaver-gl
       - xscreensaver-gl-extra
 
+#
+# Not sure if this is entirely necessary. It was originally part of
+# the stuff necessary to bootstrap the Cinnamon environment.
+#
 - name: Install kwallet
   apt: name="{{ item }}" state=latest
   with_items:
