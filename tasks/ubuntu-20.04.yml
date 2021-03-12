@@ -1,5 +1,3 @@
-- name: Install Gnome
-  apt: name=gnome state=latest
 
 - name: Install Cinnamon Desktop Environment
   apt:
@@ -17,9 +15,10 @@
 # the stuff necessary to bootstrap the Cinnamon environment.
 #
 - name: Install kwallet
-  apt: name="{{ item }}" state=latest
-  with_items:
-    - kwalletmanager
-    - libpam-kwallet-common
-    - libpam-kwallet4
-    - libpam-kwallet5
+  apt:
+    name:
+      - kwalletmanager
+      - libpam-kwallet-common
+      - libpam-kwallet4
+      - libpam-kwallet5
+    state: latest
