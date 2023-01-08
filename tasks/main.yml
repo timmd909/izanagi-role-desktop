@@ -15,6 +15,11 @@
   become_user: root
   when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "20.04"
 
+- include: ubuntu-22.04.yml
+  become: yes
+  become_user: root
+  when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "22.04"
+
 # This should be moved to the hypervisor role soon
 - include: virtualbox.yml
   become: yes
