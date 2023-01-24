@@ -1,47 +1,22 @@
 ---
 
 #
-# Ubuntu 16.04
+# Ubuntu 20.04
 #
-
-- name: Install themes (Ubuntu 16.04)
+- name: Install GTK themes (Ubuntu 20.04)
   apt:
     name:
-      - adium-theme-ubuntu
-      - dmz-cursor-theme
-      - gnome-accessibility-themes
-      - gnome-icon-theme
-      - gnome-icon-theme-symbolic
       - gnome-themes-standard
-      - gnome-themes-standard-data
-      - gray-theme
-      - hicolor-icon-theme
-      - human-netbook-theme
-      - human-theme
-      - humanity-icon-theme
-      - light-themes
-      - numix-gtk-theme
-      - sound-theme-freedesktop
-      - ubuntu-ui-toolkit-theme
-      - xcursor-themes
-  when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "16.04"
-
-#
-# Ubuntu 18.04
-#
-- name: Install GTK themes (Ubuntu 18.04)
-  apt:
-    name:
-      - albatross-gtk-theme
+      - adium-theme-ubuntu
+      - adwaita-icon-theme-full
       - blackbird-gtk-theme
       - bluebird-gtk-theme
       - greybird-gtk-theme
       - numix-blue-gtk-theme
       - numix-gtk-theme
-      - shimmer-themes
-  when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
+  when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
 
-- name: Install wallpapers (Ubuntu 18.04)
+- name: Install wallpapers (Ubuntu 20.04)
   apt:
     name:
       - budgie-wallpapers
@@ -80,25 +55,12 @@
       - xubuntu-community-wallpapers
       - xubuntu-community-wallpapers-xenial
       - xubuntu-wallpapers
-  when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '18.04'
-
-#
-# Ubuntu 20.04
-#
-- name: Install GTK themes (Ubuntu 20.04)
-  apt:
-    name:
-      - gnome-themes-standard
-      - adium-theme-ubuntu
-      - adwaita-icon-theme-full
-      - blackbird-gtk-theme
-      - bluebird-gtk-theme
-      - greybird-gtk-theme
-      - numix-blue-gtk-theme
-      - numix-gtk-theme
   when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
 
-- name: Install wallpapers (Ubuntu 20.04)
+#
+# Ubuntu 22.04
+#
+- name: Install wallpapers (Ubuntu 22.04)
   apt:
     name:
       - budgie-wallpapers

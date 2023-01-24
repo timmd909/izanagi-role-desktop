@@ -1,3 +1,0 @@
-- name: Install Virtualbox
-  apt: name=virtualbox state=latest
-  when: ansible_distribution == 'Ubuntu' and ansible_architecture == 'x86_64'
