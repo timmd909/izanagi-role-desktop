@@ -1,0 +1,6 @@
+
+- name: 'Change modifier key to Super instead of Alt'
+  shell: "gsettings set org.cinnamon.desktop.wm.preferences mouse-button-modifier '<Super>'"
+
+- name: 'Change default terminal app'
+  shell: gsettings set org.cinnamon.desktop.applications.terminal.exec terminator
