@@ -19,9 +19,10 @@
   when: ansible_distribution == "Ubuntu" and ansible_distribution_version == '16.04'
 
 - name: Install ffmpeg
-  apt: name="{{ item }}" state=latest
-  with_items:
-    - ffmpeg
-    - x264
-    - x265
+  apt:
+    state: latest
+    name:
+      - ffmpeg
+      - x264
+      - x265
   when: ansible_distribution == "Ubuntu"
