@@ -12,7 +12,7 @@
     regexp: ^deb.*
     line: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
     state: present
-  when: ansible_distribution == 'Ubuntu' or ansible_distribution == 'Linux Mint'
+  when: ansible_distribution == 'Ubuntu'
 
 - name: Update APT after manually adding Google Chrome repo
   apt: update_cache=yes
