@@ -4,19 +4,19 @@
 # COMMON
 #
 
-- include: utilities.yml
+- import_tasks: utilities.yml
   become: yes
   become_user: root
 
-- include: networking.yml
+- import_tasks: networking.yml
   become: yes
   become_user: root
 
-- include: multimedia.yml
+- import_tasks: multimedia.yml
   become: yes
   become_user: root
 
-- include: themes.yml
+- import_tasks: themes.yml
   become: yes
   become_user: root
 
@@ -24,7 +24,7 @@
 # UBUNTU 20.04 SPECIFIC
 #
 
-- include: ubuntu-20.04.yml
+- import_tasks: ubuntu-20.04.yml
   become: yes
   become_user: root
   when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "20.04"
@@ -33,7 +33,7 @@
 # UBUNTU 22.04 SPECIFIC
 #
 
-- include: ubuntu-22.04.yml
+- import_tasks: ubuntu-22.04.yml
   become: yes
   become_user: root
   when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "22.04"
@@ -42,12 +42,12 @@
 # BRAVE BROWSER
 #
 
-- include: brave-browser-20.04.yml
+- import_tasks: brave-browser-20.04.yml
   become: yes
   become_user: root
   when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
 
-- include: brave-browser-22.04.yml
+- import_tasks: brave-browser-22.04.yml
   become: yes
   become_user: root
   when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '22.04'
@@ -56,12 +56,12 @@
 # GOOGLE CHROME BROWSER
 #
 
-- include: google-chrome-20.04.yml
+- import_tasks: google-chrome-20.04.yml
   become: yes
   become_user: root
   when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
 
-- include: google-chrome-22.04.yml
+- import_tasks: google-chrome-22.04.yml
   become: yes
   become_user: root
   when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '22.04'
@@ -69,4 +69,4 @@
 #
 # Set some defaults properly
 #
-- include: configure.yml
+- import_tasks: configure.yml
