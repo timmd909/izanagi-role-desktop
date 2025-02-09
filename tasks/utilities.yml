@@ -5,9 +5,6 @@
     state: latest
     name:
       - alsa-utils
-      - gkrellm
-      - gkrellm-cpufreq
-      - gkrellm-x86info
       - synaptic
 
 - name: Install Terminator
