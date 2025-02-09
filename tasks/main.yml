@@ -16,6 +16,10 @@
   become: yes
   become_user: root
 
+- import_tasks: fonts.yml
+  become: yes
+  become_user: root
+
 - import_tasks: themes.yml
   become: yes
   become_user: root
