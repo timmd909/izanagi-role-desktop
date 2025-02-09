@@ -1,0 +1,89 @@
+---
+
+plymouth_themes:
+  # PACK 1
+  - { pack: pack_1, theme: abstract_ring }
+  - { pack: pack_1, theme: abstract_ring_alt }
+  - { pack: pack_1, theme: alienware }
+  - { pack: pack_1, theme: angular }
+  - { pack: pack_1, theme: angular_alt }
+  - { pack: pack_1, theme: black_hud }
+  - { pack: pack_1, theme: blockchain }
+  - { pack: pack_1, theme: circle }
+  - { pack: pack_1, theme: circle_alt }
+  - { pack: pack_1, theme: circle_flow }
+  - { pack: pack_1, theme: circle_hud }
+  - { pack: pack_1, theme: circuit }
+  - { pack: pack_1, theme: colorful }
+  - { pack: pack_1, theme: colorful_loop }
+  - { pack: pack_1, theme: colorful_sliced }
+  - { pack: pack_1, theme: connect }
+  - { pack: pack_1, theme: cross_hud }
+  - { pack: pack_1, theme: cubes }
+  - { pack: pack_1, theme: cuts }
+  - { pack: pack_1, theme: cuts_alt }
+  # PACK 2
+  - { pack: pack_2, theme: cyanide }
+  - { pack: pack_2, theme: cybernetic }
+  - { pack: pack_2, theme: dark_planet }
+  - { pack: pack_2, theme: darth_vader }
+  - { pack: pack_2, theme: deus_ex }
+  - { pack: pack_2, theme: dna }
+  - { pack: pack_2, theme: double }
+  - { pack: pack_2, theme: dragon }
+  - { pack: pack_2, theme: flame }
+  - { pack: pack_2, theme: glitch }
+  - { pack: pack_2, theme: glowing }
+  - { pack: pack_2, theme: green_blocks }
+  - { pack: pack_2, theme: green_loader }
+  - { pack: pack_2, theme: hexagon }
+  - { pack: pack_2, theme: hexagon_2 }
+  - { pack: pack_2, theme: hexagon_alt }
+  - { pack: pack_2, theme: hexagon_dots }
+  - { pack: pack_2, theme: hexagon_dots_alt }
+  - { pack: pack_2, theme: hexagon_hud }
+  - { pack: pack_2, theme: hexagon_red }
+  # PACK 3
+  - { pack: pack_3, theme: hexa_retro }
+  - { pack: pack_3, theme: hud }
+  - { pack: pack_3, theme: hud_2 }
+  - { pack: pack_3, theme: hud_3 }
+  - { pack: pack_3, theme: hud_space }
+  - { pack: pack_3, theme: ibm }
+  - { pack: pack_3, theme: infinite_seal }
+  - { pack: pack_3, theme: ironman }
+  - { pack: pack_3, theme: liquid }
+  - { pack: pack_3, theme: loader }
+  - { pack: pack_3, theme: loader_2 }
+  - { pack: pack_3, theme: loader_alt }
+  - { pack: pack_3, theme: lone }
+  - { pack: pack_3, theme: metal_ball }
+  - { pack: pack_3, theme: motion }
+  - { pack: pack_3, theme: optimus }
+  - { pack: pack_3, theme: owl }
+  - { pack: pack_3, theme: pie }
+  - { pack: pack_3, theme: pixels }
+  - { pack: pack_3, theme: polaroid }
+  # PACK 4
+  - { pack: pack_4, theme: red_loader }
+  - { pack: pack_4, theme: rings }
+  - { pack: pack_4, theme: rings_2 }
+  - { pack: pack_4, theme: rog }
+  - { pack: pack_4, theme: rog_2 }
+  - { pack: pack_4, theme: seal }
+  - { pack: pack_4, theme: seal_2 }
+  - { pack: pack_4, theme: seal_3 }
+  - { pack: pack_4, theme: sliced }
+  - { pack: pack_4, theme: sphere }
+  - { pack: pack_4, theme: spin }
+  - { pack: pack_4, theme: spinner_alt }
+  - { pack: pack_4, theme: splash }
+  - { pack: pack_4, theme: square }
+  - { pack: pack_4, theme: square_hud }
+  - { pack: pack_4, theme: target }
+  - { pack: pack_4, theme: target_2 }
+  - { pack: pack_4, theme: tech_a }
+  - { pack: pack_4, theme: tech_b }
+  - { pack: pack_4, theme: unrap }
+
+plymouth_default_theme: green_blocks
