@@ -9,14 +9,7 @@
     name:
       - handbrake
       - handbrake-cli
-
-#- name: Install ffmpeg PPA (Mint)
-#  apt_repository: repo=ppa:jonathonf/ffmpeg-3 codename=bionic
-#  when: ansible_distribution == "Linux Mint"
-
-- name: Install ffmpeg PPA (Ubuntu 16.04)
-  apt_repository: repo=ppa:jonathonf/ffmpeg-3
-  when: ansible_distribution == "Ubuntu" and ansible_distribution_version == '16.04'
+  when: ansible_distribution == "Ubuntu"
 
 - name: Install ffmpeg
   apt:

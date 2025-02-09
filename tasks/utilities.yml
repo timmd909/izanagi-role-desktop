@@ -8,15 +8,7 @@
       - gkrellm
       - gkrellm-cpufreq
       - gkrellm-x86info
-      - sshfs
       - synaptic
-
-- name: Install helpful utilities (Ubuntu 20.04)
-  apt:
-    state: present
-    name:
-      - deepin-screenshot
-  when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "20.04"
 
 - name: Install Terminator
   apt: name=terminator state=latest

@@ -20,51 +20,20 @@
   become: yes
   become_user: root
 
-#
-# UBUNTU 20.04 SPECIFIC
-#
-
-- import_tasks: ubuntu-20.04.yml
+- import_tasks: cinnamon.yml
   become: yes
   become_user: root
-  when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "20.04"
+  when: ansible_distribution == "Ubuntu"
 
-#
-# UBUNTU 22.04 SPECIFIC
-#
-
-- import_tasks: ubuntu-22.04.yml
+- import_tasks: brave-browser.yml
   become: yes
   become_user: root
-  when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "22.04"
+  when: ansible_distribution == 'Ubuntu'
 
-#
-# BRAVE BROWSER
-#
-
-- import_tasks: brave-browser-20.04.yml
+- import_tasks: google-chrome.yml
   become: yes
   become_user: root
-  when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
-
-- import_tasks: brave-browser-22.04.yml
-  become: yes
-  become_user: root
-  when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '22.04'
-
-#
-# GOOGLE CHROME BROWSER
-#
-
-- import_tasks: google-chrome-20.04.yml
-  become: yes
-  become_user: root
-  when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '20.04'
-
-- import_tasks: google-chrome-22.04.yml
-  become: yes
-  become_user: root
-  when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '22.04'
+  when: ansible_distribution == 'Ubuntu'
 
 #
 # Set some defaults properly
