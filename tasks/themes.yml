@@ -36,6 +36,19 @@
       - ubuntu-wallpapers-saucy
       - ubuntu-wallpapers-trusty
       - ubuntu-wallpapers-xenial
+      - ubuntustudio-wallpapers
+      - ubuntustudio-wallpapers-bionic
+      - ubuntustudio-wallpapers-cosmic
+      - ubuntustudio-wallpapers-disco
+      - ubuntustudio-wallpapers-eoan
+      - ubuntustudio-wallpapers-focal
+      - ubuntustudio-wallpapers-jammy
+      - ubuntustudio-wallpapers-kinetic
+      - ubuntustudio-wallpapers-legacy
+      - ubuntustudio-wallpapers-lunar
+      - ubuntustudio-wallpapers-mantic
+      - ubuntustudio-wallpapers-noble
+      - ubuntustudio-wallpapers-xenial
       - xubuntu-community-wallpapers
       - xubuntu-community-wallpapers-xenial
       - xubuntu-wallpapers

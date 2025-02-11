@@ -1,7 +1,31 @@
+#
+# CINNAMON PREFERENCES
+#
+# Big thanks to https://superuser.com/questions/1006983/how-to-set-cinnamon-preferences-in-command-line
+#
 
-- name: 'Change modifier key to Super instead of Alt'
-  shell: "gsettings set org.cinnamon.desktop.wm.preferences mouse-button-modifier '<Super>'"
+- name: Change modifier key to Super instead of Alt
+  dconf:
+    key: /org/cinnamon/desktop/wm/preferences/mouse-button-modifier
+    value: "'<Super>'"
 
-# BROKE, fix later
-# - name: 'Change default terminal app'
-#   shell: gsettings set org.cinnamon.desktop.applications.terminal.exec terminator
+- name: Disable weird touchpad scrolling
+  dconf:
+    key: /org/cinnamon/settings-daemon/peripherals/touchpad/natural-scroll
+    value: false
+
+- name: Change background
+  dconf:
+    key: /org/cinnamon/desktop/background/picture-uri
+    value: "{{ cinnamon_wallpaper }}"
+  when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '24.04'
+
+- name: Change background aspect
+  dconf:
+    key: /org/cinnamon/desktop/background/picture-options
+    value: "'zoom'"
+
+- name: Set Terminator as default terminal
+  dconf:
+    key: /org/cinnamon/desktop/applications/terminal/exec
+    value: "'/usr/bin/terminator'"

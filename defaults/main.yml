@@ -1,5 +1,10 @@
 ---
 
+# NOTE: These file locations are valid only in Ubuntu 24.04.
+# Earlier versions, you're on your own.
+# cinnamon_wallpaper: "'file:///usr/share/backgrounds/ubuntustudio/ubuntustudio-brushes.jpg'"
+cinnamon_wallpaper: "'file:///usr/share/backgrounds/budgie/silent_sunrise_in_the_rainforest_by_eric_li.jpg'"
+
 plymouth_themes:
   # PACK 1
   - { pack: pack_1, theme: abstract_ring }
