@@ -24,3 +24,18 @@
 
 - name: Update init RAM filesystem
   shell: update-initramfs -u
+
+#
+# Login screen updates
+#
+- name: Copy over empty logo for login screen
+  copy:
+    src: empty-logo.png
+    dest: /usr/share/plymouth/empty-logo.png
+
+- name: Update login logo
+  lineinfile:
+    state: present
+    line: "logo='/usr/share/plymouth/empty-logo.png'"
+    insertafter: ^#logo=.*
+    path: /etc/gdm3/greeter.dconf-defaults

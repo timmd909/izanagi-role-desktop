@@ -6,6 +6,7 @@
     name:
       - alsa-utils
       - synaptic
+      - dconf-editor
 
 - name: Install Terminator
   apt: name=terminator state=latest
