@@ -20,12 +20,14 @@
     value: "{{ cinnamon_wallpaper }}"
   when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == '24.04'
 
-- name: Change background aspect
+- name: Configure Cinnamon
   dconf:
-    key: /org/cinnamon/desktop/background/picture-options
-    value: "'zoom'"
+    key: "{{ item.key }}"
+    value: "{{ item.value }}"
+  with_items: "{{ cinnamon_settings }}"
 
-- name: Set Terminator as default terminal
+- name: Configure Nemo
   dconf:
-    key: /org/cinnamon/desktop/applications/terminal/exec
-    value: "'/usr/bin/terminator'"
+    key: "{{ item.key }}"
+    value: "{{ item.value }}"
+  with_items: "{{ nemo_settings }}"

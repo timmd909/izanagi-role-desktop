@@ -53,3 +53,10 @@
       - xubuntu-community-wallpapers-xenial
       - xubuntu-wallpapers
   when: ansible_distribution == 'Ubuntu'
+
+- name: Install GTK themes
+  apt:
+    name:
+      - numix-gtk-theme
+      - numix-icon-theme
+      - numix-icon-theme-circle
