@@ -9,3 +9,11 @@
       - xscreensaver-data-extra
       - xscreensaver-gl
       - xscreensaver-gl-extra
+
+- name: Remove annoying logos from bootup
+  copy:
+    src: ubuntu-logo.png
+    dest: /usr/share/plymouth/ubuntu-logo.png
+    owner: root
+    group: root
+    mode: '0644'
